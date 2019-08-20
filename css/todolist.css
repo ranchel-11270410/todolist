@@ -1,0 +1,163 @@
+html,body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+#wrap {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #00334B;
+}
+#wrap > .todolist {
+    width: 1024px;
+    margin: 0 auto;
+    color: white;
+}
+#wrap > .todolist .title {
+    text-align: center;
+}
+#wrap > .todolist .form input[type=text]{
+    float: left;
+    width: 85%;
+    margin-right: 2%;
+    background: #dddddd;
+    border-radius: 10px;
+    box-shadow: gray 2px 2px 15px,inset 2px 2px 15px gray;
+    
+}
+#wrap > .todolist .form input[type=submit]{
+    float: right;
+    width: 13%;
+    background: #46B1E4;
+    border-radius: 10px;
+    cursor: pointer;
+}
+#wrap > .todolist .list {
+    color: gray;
+    margin: 15px 0px;
+}
+#wrap > .todolist .list .item {
+    padding:10px;
+    margin-bottom:4px;
+    border-radius:8px ;
+    box-shadow: gray 2px 2px 15px;
+    background: white;
+}
+#wrap > .todolist .list > .item:hover {
+    background: #dddddd;
+    cursor: pointer;
+}
+#wrap > .todolist .list > .item span:nth-of-type(1) {
+    color: black;
+    margin-left: 5px;
+}
+#wrap > .todolist .list > .item span:nth-of-type(2){
+    float: right;
+}
+#wrap > .todolist .list > .item span:nth-of-type(2)  i {
+    margin-right: 5px;
+}
+#wrap > .todolist .list > .item span:nth-of-type(2)  i:hover {
+    color: red;
+}
+#wrap > .todolist .mask {
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background: rgba(0,0,0,.3);
+}
+#wrap > .todolist .detail{
+    display: none;
+    position:fixed;
+    left: 50%;
+    top: 50%;
+    margin: auto;
+    transform: translate(-50%,-50%);
+    width: 300px;
+    height: 400px;
+    border-radius:15px ;
+    box-shadow: red 0px 0px 20px,orange 0px 0px 40px;
+    background: white;
+    overflow: auto;
+    color: gray;
+    text-align: center;
+}
+#wrap > .todolist .detail .main{
+    min-height: 100%;
+}
+#wrap > .todolist .detail .main .content{
+    padding-bottom: 40px;
+    overflow: hidden;
+}
+#wrap > .todolist .detail .main .content .title{
+    margin: 20px 0;
+}
+#wrap > .todolist .detail .main .content input[type=text].titleInput{
+    display: none;
+    margin: 10px 0;
+    width: 90%;
+    border-radius:10px ;
+    background: #DDDDDD;
+    box-shadow: gray 5px 5px 5px;
+}
+#wrap > .todolist .detail .main .content input[type=text]#datetimepicker{
+    margin: 20px 0;
+    width: 90%;
+    border-radius:10px ;
+    background: #DDDDDD;
+    box-shadow: gray 5px 5px 15px;
+    text-align: center;
+}
+#wrap > .todolist .detail .main .content textarea{
+    resize: vertical;
+    width: 90%;
+    height: 200px;
+    overflow: auto;
+    border-radius:10px ;
+    background: #DDDDDD;
+
+    box-shadow: gray 5px 5px 15px;
+}
+#wrap > .todolist .detail .footer{
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+    margin-top: -40px;
+    font-size: 25px;
+    text-align: center;
+    line-height: 40px;
+    border-radius:50% ;
+    background-image: linear-gradient(rgba(128,128,128,1),rgba(128,128,128,0));
+}
+#wrap > .todolist .detail .footer:hover{
+    cursor: pointer;
+    background-image: linear-gradient(rgba(128,128,128,0),rgba(128,128,128,1));
+}
+
+/*完成的样式*/
+.isCompleted{
+    background: gray !important;
+}
+.megaphone {
+    float: left;
+    color: red;
+    margin-right: 10px;
+    margin-top: -5px;
+    font-size: 25px;
+    animation: move .1s infinite linear alternate;
+}
+@keyframes move {
+    from {
+        transform: rotate(-25deg);
+    }
+    to {
+        transform: rotate(25deg);
+    }
+}
+.hide {
+    display: none;
+}
